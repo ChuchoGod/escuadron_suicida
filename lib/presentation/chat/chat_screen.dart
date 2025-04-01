@@ -1,5 +1,6 @@
 import 'package:escuadron_suicida/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:escuadron_suicida/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:escuadron_suicida/presentation/widgets/shared/message_field_box.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class ChatScreen extends StatelessWidget {
                 'https://cdn.discordapp.com/icons/1087858051446493205/cc23ba1d3fbda62d9f2029eb394a4b69.png?size=4096'),
           ),
         ),
-        title: const Text('Mi amor <3'),
+        title: const Text('Mi amor ♥'),
         centerTitle: false,
       ),
       body: _ChatView(),
@@ -40,7 +41,9 @@ class _ChatView extends StatelessWidget {
                           ? const HerMessageBubble()
                           : const MyMessageBubble();
                     })),
-            Text('Mundo')
+
+            /// Caja de texto de mensajes
+            const MessageFieldBox(),
           ],
         ),
       ),
