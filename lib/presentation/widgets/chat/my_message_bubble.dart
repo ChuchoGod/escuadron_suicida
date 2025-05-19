@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:escuadron_suicida/domain/entities/message.dart';
 
 class MyMessageBubble extends StatelessWidget {
-  const MyMessageBubble({super.key});
+  //variable de la identidad atomica Message
+  final Message message;
+  //se añade la variable al constructor
+  const MyMessageBubble({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
+
+    final colors =Theme.of(context).colorScheme;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
           decoration: BoxDecoration(
-            color: colors.primary, borderRadius: BorderRadius.circular(20),
+            color: colors.primary,
+            borderRadius: BorderRadius.circular(20),
           ),
-          child: const Padding(
+          child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text(
-              'Tendre un 100 en Topicos?',
-              style: TextStyle(color: Colors.white),
-            ),
+            child: Text(message.text, style: TextStyle(color: Colors.white),),
           ),
         ),
-        const SizedBox(height: 10)
+        const SizedBox(height: 5,)
       ],
     );
   }

@@ -1,13 +1,13 @@
-import 'package:escuadron_suicida/config/theme/app_theme.dart';
-import 'package:escuadron_suicida/presentation/chat/chat_screen.dart';
-import 'package:escuadron_suicida/presentation/providers/chat_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:escuadron_suicida/config/themes/app_theme.dart';
+import 'package:escuadron_suicida/presentation/providers/chat_provider.dart';
+import 'package:escuadron_suicida/presentation/screens/chat/chat_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MainApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Yes No App',
         debugShowCheckedModeBanner: false,
-        theme: AppTheme( selectedColor: 3).theme(),
-        home: const ChatScreen()
+        theme: AppTheme(selectedColor: 0).theme(),
+        home: ChatScreen()
       ),
     );
   }

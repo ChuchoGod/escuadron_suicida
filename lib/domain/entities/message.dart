@@ -1,4 +1,4 @@
-enum FromWho { me, hers}
+enum FromWho { me, hers }
 
 //Identidad atómica: la unidad más pequeña
 class Message {
@@ -10,5 +10,4 @@ class Message {
     required this.text, 
     this.imageUrl, 
     required this.fromWho});
-
 }
